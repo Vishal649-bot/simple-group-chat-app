@@ -1,0 +1,47 @@
+<!-- <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Send Message</title>
+                </head>
+                <body>
+                <span>${data}</span>
+                    <form id="messageForm" action="/message" method="post">
+                        <input type="text" id="message" placeholder="Enter your message">
+                        <button type="submit">Send</button>
+                    </form>
+            
+                    <script>
+                        const username = localStorage.getItem('username');
+                        if (username) {
+                            const messageForm = document.getElementById('messageForm');
+                            messageForm.addEventListener('submit', function(event) {
+                                event.preventDefault();
+                                const message = document.getElementById('message').value;
+                                fetch('/message', {
+                                    method: 'POST',
+                                    headers: {
+                                        'Content-Type': 'application/json',
+                                    },
+                                    body: JSON.stringify({ username, message }),
+                                }).then(() => {
+                                    // Clear the message input
+                                    document.getElementById('message').value = '';
+                                    
+                                    // Refresh the messages immediately after sending
+                                    fetch('/messages')
+                                        .then(response => response.json())
+                                        .then(messages => {
+                                            document.querySelector('span').innerText = messages.join('\\n');
+                                        })
+                                        .catch(error => console.error('Error:', error));
+                                });
+                            });
+                        } else {
+                            // Redirect to login if username not found
+                            window.location.href = '/user';
+                        }
+                    </script>
+                </body>
+                </html> -->

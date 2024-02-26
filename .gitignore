@@ -1,0 +1,23 @@
+node_modules/
+
+# Logs
+logs
+*.log
+
+# Dependency directories
+lib/
+vendor/
+
+# dotenv environment variables file
+.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE specific files
+.vscode/
+.idea/
+
+# npm
+npm-debug.log*
